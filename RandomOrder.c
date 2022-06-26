@@ -1,6 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-#include <stdlib.h>                     //³­¼öÀÇ »ç¿ë
+#include <stdlib.h>                     //ë‚œìˆ˜ì˜ ì‚¬ìš©
 
 const char* __color_start = "[1;32;40m";
 const char* __color_end = "[0m";
@@ -16,33 +16,33 @@ int main(void) {
 	printf("%s", __color_start);
 
 	printf("-----------------------------------------------------------l\n");
-	printf("l           ¦£-----¦¤                                        l\n");
-	printf("l           ¤Ó  ? ¤Ó    Deciding the Random Order          l\n");
-	printf("l           ¦¦-----¦¥                                        l\n");
+	printf("l           â”Œ-----â”                                        l\n");
+	printf("l           ã…£  ? ã…£    Deciding the Random Order          l\n");
+	printf("l           â””-----â”˜                                        l\n");
 	printf("l                                                          l\n");
 	printf("l                                                          l\n");
-	printf("l       ¡Û      ¡Û      ¡Û                                 l\n");
-	printf("l      /¤Ó¡¬   /¤Ó¡¬   /¤Ó¡¬                               l\n");
-	printf("l       ¤µ      ¤µ      ¤µ                                 l\n");
+	printf("l       â—‹      â—‹      â—‹                                 l\n");
+	printf("l      /ã…£ï¼¼   /ã…£ï¼¼   /ã…£ï¼¼                               l\n");
+	printf("l       ã……      ã……      ã……                                 l\n");
 	printf("l                                                          l\n");
 	printf("-----------------------------------------------------------l\n");
 	printf("%s", __color_end);
 
-	printf("\n¸î¸íÀÌ¼­ ÁøÇàÇÒ °ÍÀÎ°¡¿ä? (ÃÖ´ë 10¸í °¡´É): ");
+	printf("\nëª‡ëª…ì´ì„œ ì§„í–‰í•  ê²ƒì¸ê°€ìš”? (ìµœëŒ€ 10ëª… ê°€ëŠ¥): ");
 	scanf("%d", &total);
 	printf("\n");
 
 	for (int i = 0; i < total; i++) {
-		printf(">> ÀÌ¸§À» ÀÔ·ÂÇÏ½Ã¿À: ");
-		scanf("%s", info[i].name);                         //ÁÖÀÇ: stringÀÌ¹Ç·Î %c°¡ ¾Æ´Ñ %s°¡ µé¾î°¡¾ßÇÑ´Ù.
+		printf(">> ì´ë¦„ì„ ì…ë ¥í•˜ì‹œì˜¤: ");
+		scanf("%s", info[i].name);                         //ì£¼ì˜: stringì´ë¯€ë¡œ %cê°€ ì•„ë‹Œ %sê°€ ë“¤ì–´ê°€ì•¼í•œë‹¤.
 
 	}
 
 	for (int i = 0; i < total;i++) {
-		int randnum =1+(rand()% total);                   //³­¼ö¹ß»ı±â
+		int randnum =1+(rand()% total);                   //ë‚œìˆ˜ë°œìƒê¸°
 		info[i].num = randnum;
 	
-		for (int j = 0; j < i ; j++) {                   //Áßº¹µÈ¼öÀÎÁö °Ë»ç
+		for (int j = 0; j < i ; j++) {                   //ì¤‘ë³µëœìˆ˜ì¸ì§€ ê²€ì‚¬
 			if (randnum == info[j].num) {
 				i = i - 1;
 				break;          
@@ -51,9 +51,9 @@ int main(void) {
 		
 	}
 	printf("\n");
-	/* Ã¹¹øÂ° ¹æ¹ı: ¼ø¼­ »ó°ü¾øÀÌ ÀÔ·ÂÇÑ ÀÌ¸§ ¼ø¼­´ë·Î Ãâ·Â
+	/* ì²«ë²ˆì§¸ ë°©ë²•: ìˆœì„œ ìƒê´€ì—†ì´ ì…ë ¥í•œ ì´ë¦„ ìˆœì„œëŒ€ë¡œ ì¶œë ¥
 	printf("---------------------------------------\n");
-	printf("   ÀÌ¸§           ¼ø¼­\n");
+	printf("   ì´ë¦„           ìˆœì„œ\n");
 	printf("---------------------------------------\n");
 	for (int i = 0;i < total;i++) {
 		printf("   %s            %d\n", info[i].name, info[i].num);
@@ -61,7 +61,7 @@ int main(void) {
 	*/
 
 	printf("---------------------------------------\n");
-	printf("   ÀÌ¸§           ¼ø¼­\n");
+	printf("   ì´ë¦„           ìˆœì„œ\n");
 	printf("---------------------------------------\n");
 	for (int j=1 ;j < total+1;j++) {
 		for (int i = 0;i < total;i++) {
@@ -71,7 +71,7 @@ int main(void) {
 		}
 	}
 	printf("\n---------------------------------------");
-	printf("\n  ¼ø¼­: ");
+	printf("\n  ìˆœì„œ: ");
 	for (int j = 1;j < total + 1;j++) {
 		for (int i = 0;i < total;i++) {
 			if (j == info[i].num) {
